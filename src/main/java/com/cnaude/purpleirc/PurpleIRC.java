@@ -81,7 +81,7 @@ import static net.minecraft.util.text.TextFormatting.RED;
 @Mod(modid = PurpleIRC.MOD_ID, version = Version.VER, acceptableRemoteVersions = "*")
 public class PurpleIRC {
 
-    public static final String MOD_ID = "PurpleIRC";
+    public static final String MOD_ID = "purpleirc";
     public FMLServerHandler fmlInstance = FMLServerHandler.instance();
 
     @Mod.Instance(MOD_ID)
@@ -382,7 +382,7 @@ public class PurpleIRC {
         ircConnCheckInterval = getConfig().getOption("conn-check-interval", 1000L);
         reconnectSuppression = getConfig().getOption("reconnect-fail-message-count", 10);
         ircChannelCheckInterval = getConfig().getOption("channel-check-interval", 100L);
-        
+
         commandAliases = getConfig().getOption("command-aliases", new ArrayList<String>());
 
     }
@@ -575,7 +575,7 @@ public class PurpleIRC {
                 m = "Players on " + host + "("
                         + players.length
                         + "): " + Joiner.on(", ")
-                        .join(players);
+                                .join(players);
             }
             return m;
         } else {
@@ -815,12 +815,12 @@ public class PurpleIRC {
 
     public String getPlayerWorldName(EntityPlayerMP player) {
         String worldName = defaultPlayerWorld;
-        
+
         if (player.worldObj != null) {
             return player.worldObj.getWorldInfo().getWorldName();
         }
-        
+
         return worldName;
     }
-    
+
 }

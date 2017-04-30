@@ -142,7 +142,8 @@ public class CommandHandlers implements ICommand {
 
     @Override
     public int compareTo(ICommand o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        plugin.logDebug("compareTo: Not supported yet."); 
+        return 0;
     }
 
     @Override

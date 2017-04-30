@@ -35,7 +35,7 @@ apply plugin: 'maven-publish'
 def jenkinsBuild = System.getenv("BUILD_NUMBER") ?: "SNAPSHOT"
 version = "${minecraft_version}-${PurpleIRC_version}-${jenkinsBuild}"
 group = "com.cnaude.purpleirc"
-archivesBaseName = "PurpleIRC"
+archivesBaseName = "purpleirc"
 
 configurations {
     shade
