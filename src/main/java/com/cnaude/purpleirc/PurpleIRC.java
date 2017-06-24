@@ -226,9 +226,9 @@ public class PurpleIRC {
         MinecraftForge.EVENT_BUS.register(new GameServerCommandListener(this));
         MinecraftForge.EVENT_BUS.register(new GamePlayerChatListener(this));
 
-        FMLCommonHandler.instance().bus().register(new GamePlayerJoinListener(this));
-        FMLCommonHandler.instance().bus().register(new GamePlayerQuitListener(this));
-        FMLCommonHandler.instance().bus().register(new GamePlayerPlayerAchievementAwardedListener(this));
+        MinecraftForge.EVENT_BUS.register(new GamePlayerJoinListener(this));
+        MinecraftForge.EVENT_BUS.register(new GamePlayerQuitListener(this));
+        MinecraftForge.EVENT_BUS.register(new GamePlayerPlayerAchievementAwardedListener(this));
 
     }
 
